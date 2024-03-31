@@ -135,6 +135,27 @@ module.exports.disableUser = async (req, res, next) => {
     }
 };
 
+module.exports.enableUser = async (req, res, next) => {
+    try {
+        const { username } = req.params;
+
+        const enabledUser = await User.findOneAndUpdate(
+            { username },
+            { status: 'active', type: 'user' },
+            { new: true }
+        );
+        if (!enabledUser) {
+            res.status(404).json({ success: false, message: 'User not found' });
+            return;
+        }
+
+        res.status(200).json({ success: true, message: 'User disabled successfully', user: enabledUser });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal Server Error'});
+    }
+};
+
 module.exports.promoteToAdmin = async (req, res, next) => {
     try {
         const { username } = req.params;
