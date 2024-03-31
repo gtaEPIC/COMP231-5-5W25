@@ -4,14 +4,6 @@ Deskify will be a web based ticket management system for IT support teams. <br>
 It will allow users to create tickets for issues they are having with their computer and IT support teams to manage 
 these tickets and resolve them.
 
-## Users / Roles
-- [@gtaEPIC (Johnathan Hall)](https://github.com/gtaEPIC) - Project Manager
-- [@imirza7 (Ibtesam Mirza)](https://github.com/imirza7) - Lead Software Engineer
-- [@rsotoacu (Rodrigo Soto Acuna)](https://github.com/rsotoacu) - UI Programmer
-- [@Subhan636 (Mohammed Subhaan Asif Hakeem)](https://github.com/Subhan636) - Security Programmer
-- [@Annie021 (Anmoljeet Kaur)](https://github.com/Annie021) - Database Programmer
-- [@saiham019 (Saiham Salim Ullah)](https://github.com/saiham019) - Web Designer
-
 ## ⚠️ DATABASE SETUP ⚠️
 The database library is mongoose. <br>
 You will need to create a `.env` file in the root directory. <br>
