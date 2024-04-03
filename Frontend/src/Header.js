@@ -3,7 +3,7 @@
 import React from 'react';
 import {NavLink, Link, useLocation} from 'react-router-dom';
 import logo from './images/logo.png';
-import { getUsername, isAuthenticated, logout } from './pages/login-helper';
+import {getIsAdmin, getUsername, isAuthenticated, logout} from './pages/login-helper';
 import './header.css';
 
 function Header() {
@@ -44,6 +44,15 @@ function Header() {
                 </ul>
               </li>
             </button>
+            {isAuthenticated() && getIsAdmin() && (
+                <button style={{background: "transparent"}}>
+                  <li className="nav-item">
+                    <NavLink to="/users" className="nav-link" style={{color: "whites"}}>
+                      Manage Users
+                    </NavLink>
+                  </li>
+                </button>
+            )}
             {isAuthenticated() ? (
                 <>
                   <li className="nav-item dropdown me-2">

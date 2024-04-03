@@ -16,6 +16,7 @@ import View from "./components/View";
 import UpdateTicket from "./components/UpdateTicket";
 import Profile from "./components/Profile"; 
 import Signup from "./pages/Signup";
+import Users from "./pages/Users";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +37,7 @@ root.render(
                                 <Route path="/login/" element={<Login />} />
                                 <Route path="/profile" element={<Profile />} />
                                 <Route path="/signup" element={<Signup />} />
+                                <Route path="/users" element={<Users />} />
                                 <Route path="*" element={<App />} />
                             </Routes>
                         </>
